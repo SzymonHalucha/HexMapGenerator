@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ddffa37aacd0b04d9fef0ffa5ca1202, type: 3}
+  m_Name: 64Map
+  m_EditorClassIdentifier: 
+  Seed: 0
+  Size: {x: 64, y: 64}
+  LandNoiseData: {fileID: 11400000, guid: 98e15a6bca2d69a42b88ac703705d17f, type: 2}
+  BiomesNoiseData: {fileID: 11400000, guid: 2f0dd227b28ccfc4bb676015755845e5, type: 2}
+  LandMaskRadius: 0.5
+  Biomes:
+  - {fileID: 11400000, guid: a98ae299443bcbf48bd39d054d398c27, type: 2}
+  - {fileID: 11400000, guid: 181824fd91478584c81d8a163a117008, type: 2}
+  - {fileID: 11400000, guid: 62251739c3cf9b444b94fbbb19392217, type: 2}
+  - {fileID: 11400000, guid: 8a8b62141a06fa347b1d4071de397870, type: 2}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28dd108543981c4b93a46324ef4c147, type: 3}
+  m_Name: Beach
+  m_EditorClassIdentifier: 
+  LandThreshold:
+    Min: 0
+    Max: 0.1
+  BiomeThreshold:
+    Min: 0
+    Max: 1
+  Colors:
+  - Value: {r: 0.9, g: 0.795, b: 0.585, a: 1}
+    Weight: 1
+  - Value: {r: 0.85, g: 0.75021744, b: 0.5506522, a: 1}
+    Weight: 1
+  ResourceVariants: []

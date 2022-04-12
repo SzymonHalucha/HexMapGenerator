@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf516919d24e234f9961ed9c868e758, type: 3}
+  m_Name: BirchWood
+  m_EditorClassIdentifier: 
+  ResourceType: 1
+  TileVariants:
+  - Value: {fileID: 5528840088431849092, guid: fbc8141ce338d414ea831cd409a7d961, type: 3}
+    Weight: 1
+  - Value: {fileID: 5090574076440132226, guid: 750ca16314d8cc449ac60c2b07e06db2, type: 3}
+    Weight: 1
+  - Value: {fileID: 5416205874203457694, guid: d3b89a4fa70dbdc47a1c6d27cd4f8ecb, type: 3}
+    Weight: 1

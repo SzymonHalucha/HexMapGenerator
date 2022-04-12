@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf516919d24e234f9961ed9c868e758, type: 3}
+  m_Name: SpruceWood
+  m_EditorClassIdentifier: 
+  ResourceType: 1
+  TileVariants:
+  - Value: {fileID: 6894561554099715262, guid: e9c3c09a448818248bf82bd360f82984, type: 3}
+    Weight: 1
+  - Value: {fileID: 1850912859580666456, guid: b905c9f773a84aa4fae5c6c39ea72c2d, type: 3}
+    Weight: 1
+  - Value: {fileID: 5278238433249641052, guid: a119ed6eec4b1564aa459d46e2248e69, type: 3}
+    Weight: 1

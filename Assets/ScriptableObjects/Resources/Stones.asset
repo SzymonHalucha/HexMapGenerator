@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf516919d24e234f9961ed9c868e758, type: 3}
+  m_Name: Stones
+  m_EditorClassIdentifier: 
+  ResourceType: 2
+  TileVariants:
+  - Value: {fileID: 1133083808146864609, guid: 04d5af0d3ed068b4aaab8d4b88e347ee, type: 3}
+    Weight: 1
+  - Value: {fileID: 6055751273482491059, guid: 47739bec1f1cb6d4882ec17d9ac8ff7c, type: 3}
+    Weight: 1
+  - Value: {fileID: 6573402212331244352, guid: 6920fdb74e135674e82945a29213a4be, type: 3}
+    Weight: 1

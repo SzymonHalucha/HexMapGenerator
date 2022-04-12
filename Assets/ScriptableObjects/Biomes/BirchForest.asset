@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28dd108543981c4b93a46324ef4c147, type: 3}
+  m_Name: BirchForest
+  m_EditorClassIdentifier: 
+  LandThreshold:
+    Min: 0.35
+    Max: 1
+  BiomeThreshold:
+    Min: 0
+    Max: 0.5
+  Colors:
+  - Value: {r: 0.125, g: 0.5, b: 0.125, a: 1}
+    Weight: 1
+  - Value: {r: 0.1137255, g: 0.45098042, b: 0.1137255, a: 1}
+    Weight: 1
+  ResourceVariants:
+  - Value: {fileID: 11400000, guid: 26b813b89120e124e82a1337f2730fbe, type: 2}
+    Weight: 1
