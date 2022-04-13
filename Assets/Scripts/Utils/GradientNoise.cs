@@ -6,8 +6,19 @@ using Random = HexMapGenerator.Utils.Random;
 
 namespace HexMapGenerator.Utils
 {
+    /// <summary>
+    /// This class is responsible for generating gradient noise.
+    /// </summary>
     public static class GradientNoise
     {
+        /// <summary>
+        /// Generates a 2D array filled with gradient noise (Perlin noise).
+        /// </summary>
+        /// <param name="random">Selected random number generator.</param>
+        /// <param name="data">Information about noise characteristics.</param>
+        /// <param name="width">The width of the array.</param>
+        /// <param name="height">The height of the array.</param>
+        /// <returns>Returns a 2D floating point array with noise.</returns>
         public static float[,] Generate(Random random, GradientNoiseData data, int width, int height)
         {
             float[,] array = new float[width, height];

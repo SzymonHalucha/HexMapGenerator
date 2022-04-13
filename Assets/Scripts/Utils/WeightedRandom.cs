@@ -6,6 +6,10 @@ using Random = HexMapGenerator.Utils.Random;
 
 namespace HexMapGenerator.Utils
 {
+    /// <summary>
+    /// This class provides a weighted random draw.
+    /// </summary>
+    /// <typeparam name="T">Selected generic element.</typeparam>
     [Serializable]
     public class WeightedRandom<T>
     {
@@ -18,6 +22,12 @@ namespace HexMapGenerator.Utils
             this.Weight = weight;
         }
 
+        /// <summary>
+        /// Randomize by weight an element from the selected array. 
+        /// </summary>
+        /// <param name="random">Selected random number generator.</param>
+        /// <param name="array">Selected array.</param>
+        /// <returns>Returns the drawn element.</returns>
         public static T GetRandomValueFromArray(Random random, WeightedRandom<T>[] array)
         {
             float weightSum = 0;
@@ -42,6 +52,12 @@ namespace HexMapGenerator.Utils
             return default(T);
         }
 
+        /// <summary>
+        /// Randomize by weight an element from the selected list. 
+        /// </summary>
+        /// <param name="random">Selected random number generator.</param>
+        /// <param name="list">Selected list.</param>
+        /// <returns>Returns the drawn element.</returns>
         public static T GetRandomValueFromList(Random random, List<WeightedRandom<T>> list)
         {
             float weightSum = 0;

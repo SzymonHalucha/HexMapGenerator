@@ -6,6 +6,9 @@ using HexMapGenerator.Utils;
 
 namespace HexMapGenerator.Generation
 {
+    /// <summary>
+    /// This class is responsible for storing information about the generated map and its mesh.
+    /// </summary>
     [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(MeshCollider))]
     public class Map : MonoBehaviour
     {
@@ -28,6 +31,10 @@ namespace HexMapGenerator.Generation
             _mapMesher = new MapMesher();
         }
 
+        /// <summary>
+        /// Generates a map with the selected settings.
+        /// </summary>
+        /// <param name="selectedData">Selected map settings.</param>
         public void GenerateMap(GeneratorData selectedData)
         {
             CleanMapArray(selectedData);
@@ -39,6 +46,10 @@ namespace HexMapGenerator.Generation
             _meshCollider.sharedMesh = _meshFilter.sharedMesh;
         }
 
+        /// <summary>
+        /// Creates a new array to store information about the generated map and/or removes the remnants of the previous generation.
+        /// </summary>
+        /// <param name="selectedData">Selected map settings.</param>
         public void CleanMapArray(GeneratorData selectedData)
         {
             if (World == null)

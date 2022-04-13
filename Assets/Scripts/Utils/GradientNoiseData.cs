@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace HexMapGenerator.Utils
 {
+    /// <summary>
+    /// This class stores information about the characteristics of the gradient noise.
+    /// </summary>
     [CreateAssetMenu(menuName = "Hex/Gradient Noise Data", fileName = "New Gradient Noise Data", order = 1)]
     public class GradientNoiseData : ScriptableObject
     {

@@ -6,8 +6,20 @@ using Random = HexMapGenerator.Utils.Random;
 
 namespace HexMapGenerator.Utils
 {
+    /// <summary>
+    /// This class is responsible for generating random points at equal distances from each other.
+    /// Source: https://www.youtube.com/watch?v=7WcmyxyFO7o
+    /// </summary>
     public static class BlueNoise
     {
+        /// <summary>
+        /// Generates a list with random points equally spaced from each other.
+        /// </summary>
+        /// <param name="random">Selected random number generator.</param>
+        /// <param name="radius">Distance between points.</param>
+        /// <param name="hasCenterPoint">Generating a center point (0.5, 0.5).</param>
+        /// <param name="sampling">The maximum number of attempts to select the correct position for a point.</param>
+        /// <returns>Returns a list of points.</returns>
         public static List<Vector2> Generate(Random random, float radius, bool hasCenterPoint, int sampling = 10)
         {
             float mapSize = 1f;

@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace HexMapGenerator.Interactive
 {
+    /// <summary>
+    /// This class stores parameters for moving, panning, zooming, boundaries, and the starting positions of the camera and its pivot.
+    /// </summary>
     [CreateAssetMenu(menuName = "Hex/Camera Data", fileName = "New Camera Data", order = 0)]
     public class CameraMovementData : ScriptableObject
     {

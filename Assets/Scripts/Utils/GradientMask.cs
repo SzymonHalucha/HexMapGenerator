@@ -5,10 +5,22 @@ using UnityEngine;
 
 namespace HexMapGenerator.Utils
 {
+    /// <summary>
+    /// This class is responsible for generating a gradient mask of one of three types to choose from.
+    /// </summary>
     public static class GradientMask
     {
         public enum MaskType { Disk, Manhattan, Euclidean }
 
+        /// <summary>
+        /// Generates a 2D array with a gradient mask.
+        /// </summary>
+        /// <param name="type">Selected mask type.</param>
+        /// <param name="radius">Radius of the mask.</param>
+        /// <param name="width">The width of the array.</param>
+        /// <param name="height">The height of the array.</param>
+        /// <param name="inverse">Invert the array values.</param>
+        /// <returns>Returns a 2D floating point array of the gradient mask.</returns>
         public static float[,] Generate(MaskType type, float radius, int width, int height, bool inverse = false)
         {
             float[,] array = new float[width, height];

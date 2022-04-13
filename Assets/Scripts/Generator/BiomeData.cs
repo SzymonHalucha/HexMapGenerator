@@ -7,6 +7,9 @@ using Range = HexMapGenerator.Utils.Range;
 
 namespace HexMapGenerator.Generation
 {
+    /// <summary>
+    /// This class allows you to create new biomes from within the unity editor.
+    /// </summary>
     [CreateAssetMenu(menuName = "Hex/Biome Data", fileName = "New Biome Data", order = 0)]
     public class BiomeData : ScriptableObject
     {

@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace HexMapGenerator.Interactive
 {
+    /// <summary>
+    /// This class is responsible for camera movement.
+    /// </summary>
     public class CameraMovement : MonoBehaviour
     {
         public CameraMovementData Data;
@@ -34,6 +37,9 @@ namespace HexMapGenerator.Interactive
             ZoomHandler();
         }
 
+        /// <summary>
+        /// Sets camera rotation, position, and zoom to initial values.
+        /// </summary>
         private void Initialize()
         {
             targetPosition = Data.StartPosition;
@@ -46,6 +52,9 @@ namespace HexMapGenerator.Interactive
             cameraPivot.localPosition = targetZoom;
         }
 
+        /// <summary>
+        /// Responsible for movement the camera parent pivot.
+        /// </summary>
         private void MoveHandler()
         {
             if (move.x > 0) targetPosition += (pivot.right.normalized * Data.MoveSpeed) * Time.deltaTime;
@@ -60,6 +69,9 @@ namespace HexMapGenerator.Interactive
             pivot.position = Vector3.Lerp(pivot.position, targetPosition, Data.MoveSmoothness * Time.deltaTime);
         }
 
+        /// <summary>
+        /// Responsible for rotating the camera parent pivot.
+        /// </summary>
         private void RotateHandler()
         {
             if (rotate < 0) targetRoation *= Quaternion.Euler(Vector3.up * Data.RotationSpeed * Time.deltaTime);
@@ -68,6 +80,9 @@ namespace HexMapGenerator.Interactive
             pivot.rotation = Quaternion.Lerp(pivot.rotation, targetRoation, Data.RotationSmoothness * Time.deltaTime);
         }
 
+        /// <summary>
+        /// Handles camera position directly, allowing you to zoom in and out (Camera.localPosition).
+        /// </summary>
         private void ZoomHandler()
         {
             if (zoom > 0) targetZoom += (new Vector3(0, -0.5f, 0.5f) * Data.ZoomSpeed) * Time.deltaTime;
@@ -81,22 +96,38 @@ namespace HexMapGenerator.Interactive
             cameraPivot.LookAt(pivot.transform);
         }
 
+        /// <summary>
+        /// Reads WSAD values from the New input System.
+        /// </summary>
+        /// <param name="value">The vector value of the WSAD keys from New Input System.</param>
         private void OnMove(InputValue value)
         {
             move = value.Get<Vector2>();
         }
 
+        /// <summary>
+        /// Reads the acceleration (Shift) button and changes the speed at which the camera moves.
+        /// </summary>
+        /// <param name="value">Boolean value from New Input System.</param>
         private void OnMultiplier(InputValue value)
         {
             if (value.isPressed) Data.MoveSpeed *= Data.ShiftMultiplier;
             else Data.MoveSpeed /= Data.ShiftMultiplier;
         }
 
+        /// <summary>
+        /// Reads the axial value of QE buttons between -1 and 1.
+        /// </summary>
+        /// <param name="value">Axial value of QE buttons from New Input System.</param>
         private void OnRotate(InputValue value)
         {
             rotate = value.Get<float>();
         }
 
+        /// <summary>
+        /// Reads the vector value of the mouse wheel (y property).
+        /// </summary>
+        /// <param name="value">Mouse wheel vector value (y property) from New Input System</param>
         private void OnZoom(InputValue value)
         {
             zoom = value.Get<Vector2>().y;

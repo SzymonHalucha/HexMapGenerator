@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace HexMapGenerator.Generation
 {
+    /// <summary>
+    /// This class stores information about the basic division unit of the map, the hexagon.
+    /// </summary>
     public class Block
     {
         public float LandValue { get; set; }

@@ -5,8 +5,17 @@ using UnityEngine;
 
 namespace HexMapGenerator.Utils
 {
+    /// <summary>
+    /// This class is responsible for generating blur.
+    /// </summary>
     public static class BoxBlur
     {
+        /// <summary>
+        /// Generates a 2D array with blurred values of the original array.
+        /// </summary>
+        /// <param name="values">Selected array for blurring.</param>
+        /// <param name="radius">Blur strength.</param>
+        /// <returns>Returns a 2D floating point array with blurred values.</returns>
         public static float[,] Generate(float[,] values, int radius)
         {
             int halfRadius = radius / 2;

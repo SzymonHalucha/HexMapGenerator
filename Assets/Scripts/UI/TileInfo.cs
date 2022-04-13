@@ -10,6 +10,9 @@ using HexMapGenerator.Utils;
 
 namespace HexMapGenerator.UI
 {
+    /// <summary>
+    /// This class is responsible for displaying information about the hexagon using the UI.
+    /// </summary>
     public class TileInfo : MonoBehaviour
     {
         public GameObject HighlightPrefab;
@@ -31,6 +34,13 @@ namespace HexMapGenerator.UI
             this.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
         }
 
+        /// <summary>
+        /// Displays and sets the UI position with the specified values.
+        /// </summary>
+        /// <param name="x">The position/segment X of the selected hexagon.</param>
+        /// <param name="y">The position/segment Y of the selected hexagon.</param>
+        /// <param name="biome">Name of the biome to display.</param>
+        /// <param name="resource">The name of the resource to display.</param>
         public void UpdateTileInfo(int x, int y, string biome, string resource)
         {
             Vector3 position = MathfExtend.SegmentToPosition(x, y);
@@ -47,6 +57,9 @@ namespace HexMapGenerator.UI
             _prefab.gameObject.SetActive(true);
         }
 
+        /// <summary>
+        /// Sets the hexagon highlight to the current cursor position.
+        /// </summary>
         private void SetPrefabOnPosition()
         {
             Vector3 mousePosition = MathfExtend.GetMouseWorldPosition();
@@ -56,6 +69,9 @@ namespace HexMapGenerator.UI
             _prefab.transform.position = position;
         }
 
+        /// <summary>
+        /// Hides the UI and highlights the hexagon.
+        /// </summary>
         public void OnExit()
         {
             _canvas.enabled = false;

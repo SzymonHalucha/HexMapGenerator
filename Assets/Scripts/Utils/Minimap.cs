@@ -6,6 +6,9 @@ using HexMapGenerator.Generation;
 
 namespace HexMapGenerator.Utils
 {
+    /// <summary>
+    /// This class displays a map as a texture on the object mesh (For debugging only).
+    /// </summary>
     public class Minimap : MonoBehaviour
     {
         public static Minimap Instance { get; private set; }
@@ -18,6 +21,11 @@ namespace HexMapGenerator.Utils
             _renderer = this.transform.GetComponent<MeshRenderer>();
         }
 
+        /// <summary>
+        /// Generates a texture representing the generated map and adds it to the object mesh.
+        /// </summary>
+        /// <param name="world">An array with the generated map.</param>
+        /// <param name="showBiomes">Use colors to define biomes.</param>
         public void UpdateMinimap(Block[,] world, bool showBiomes = false)
         {
             int width = world.GetLength(0);

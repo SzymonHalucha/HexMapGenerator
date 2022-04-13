@@ -9,6 +9,9 @@ using HexMapGenerator.Utils;
 
 namespace HexMapGenerator.UI
 {
+    /// <summary>
+    /// This class is responsible for highlighting the hexagon at the cursor position.
+    /// </summary>
     public class HighlightOnPointer : MonoBehaviour
     {
         public string MapMaskName = "Map";
@@ -31,6 +34,9 @@ namespace HexMapGenerator.UI
             SetHighlightOnCurrentSegment();
         }
 
+        /// <summary>
+        /// Reads the cursor position on the screen and converts it to a segmented position and sets the highlight on it.
+        /// </summary>
         private void SetHighlightOnCurrentSegment()
         {
             Vector3 mousePosition = MathfExtend.GetMouseWorldPosition(~_mask);
@@ -40,6 +46,9 @@ namespace HexMapGenerator.UI
             this.transform.position = position;
         }
 
+        /// <summary>
+        /// Displays information about the hexagon using the TileInfo class.
+        /// </summary>
         private void OnClicked()
         {
             if (_isPointerOnUI) return;

@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace HexMapGenerator.Utils
 {
+    /// <summary>
+    /// This class is a wrapper for the System.Random class with an interface compatible with the UnityEngine.Random static class.
+    /// </summary>
     public class Random
     {
         private System.Random _random;

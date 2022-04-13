@@ -7,8 +7,16 @@ using Random = HexMapGenerator.Utils.Random;
 
 namespace HexMapGenerator.Generation
 {
+    /// <summary>
+    /// This class allows you to generate map terrain and biomes and prefabs placed on the map.
+    /// </summary>
     public static class Generator
     {
+        /// <summary>
+        /// Generates terrain in the form of an island.
+        /// </summary>
+        /// <param name="data">Information needed to generate a terrain according to specifications.</param>
+        /// <param name="world">Storage location of the generated map.</param>
         public static void GenerateLand(GeneratorData data, Block[,] world)
         {
             float[,] land = GradientNoise.Generate(data.WorldRandom, data.LandNoiseData, data.Size.x, data.Size.y);
@@ -24,6 +32,11 @@ namespace HexMapGenerator.Generation
             }
         }
 
+        /// <summary>
+        /// Generates biomes and prefabs specific to given biome types.
+        /// </summary>
+        /// <param name="data">Information needed to generate a biomes according to specifications.</param>
+        /// <param name="world">Storage location of the generated map.</param>
         public static void GenerateBiomes(GeneratorData data, Block[,] world)
         {
             float[,] biomes = GradientNoise.Generate(data.WorldRandom, data.BiomesNoiseData, data.Size.x, data.Size.y);
@@ -39,6 +52,12 @@ namespace HexMapGenerator.Generation
             }
         }
 
+        /// <summary>
+        /// Assigns the hexagon a color drawn from the variants for the given biome.
+        /// </summary>
+        /// <param name="biome">Selected biome.</param>
+        /// <param name="world">Storage location of the generated map.</param>
+        /// <param name="random">Selected random number generator.</param>
         private static void GenerateTilesColors(BiomeData biome, Block[,] world, Random random)
         {
             int width = world.GetLength(0);
@@ -58,6 +77,12 @@ namespace HexMapGenerator.Generation
             }
         }
 
+        /// <summary>
+        /// Generates prefabs on appropriate hexagons specific to the selected biome.
+        /// </summary>
+        /// <param name="biome">Selected biome.</param>
+        /// <param name="world">Storage location of the generated map.</param>
+        /// <param name="random">Selected random number generator.</param>
         private static void GenerateTilesPrefabs(BiomeData biome, Block[,] world, Random random)
         {
             int width = world.GetLength(0);
